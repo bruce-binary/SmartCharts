@@ -1,4 +1,5 @@
 /* eslint-disable no-new, react/jsx-indent, react/no-danger, react/jsx-indent-props */
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from './components/Chart.jsx';
