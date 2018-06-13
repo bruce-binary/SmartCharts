@@ -600,8 +600,6 @@ function inject() /* fn(stores, nextProps) or ...storeNames */{
     }
 }
 
-var mobxAdminProperty = mobx.$mobx || "$mobx";
-
 /**
  * dev tool support
  */
@@ -761,7 +759,7 @@ function makeComponentReactive(render) {
 
     // Generate friendly name for debugging
     var initialName = this.displayName || this.name || this.constructor && (this.constructor.displayName || this.constructor.name) || "<component>";
-    var rootNodeID = this._reactInternalInstance && this._reactInternalInstance._rootNodeID || this._reactInternalInstance && this._reactInternalInstance._debugID || this._reactInternalFiber && this._reactInternalFiber._debugID;
+    var rootNodeID = this._reactInternalInstance && this._reactInternalInstance._rootNodeID || this._reactInternalFiber && this._reactInternalFiber._debugID;
     /**
      * If props are shallowly modified, react will render anyway,
      * so atom.reportChanged() should not result in yet another re-render
@@ -806,7 +804,7 @@ function makeComponentReactive(render) {
         }
     });
     reaction.reactComponent = this;
-    reactiveRender[mobxAdminProperty] = reaction;
+    reactiveRender.$mobx = reaction;
     this.render = reactiveRender;
     return reactiveRender.call(this);
 }
@@ -817,7 +815,7 @@ function makeComponentReactive(render) {
 var reactiveMixin = {
     componentWillUnmount: function componentWillUnmount() {
         if (isUsingStaticRendering === true) return;
-        this.render[mobxAdminProperty] && this.render[mobxAdminProperty].dispose();
+        this.render.$mobx && this.render.$mobx.dispose();
         this.__$mobxIsUnmounted = true;
         if (isDevtoolsEnabled) {
             var node = findDOMNode$2(this);
@@ -938,10 +936,8 @@ function mixinLifecycleEvents(target) {
     if (!target.shouldComponentUpdate) {
         target.shouldComponentUpdate = reactiveMixin.shouldComponentUpdate;
     } else {
-        if (target.shouldComponentUpdate !== reactiveMixin.shouldComponentUpdate) {
-            // TODO: make throw in next major
-            console.warn("Use `shouldComponentUpdate` in an `observer` based component breaks the behavior of `observer` and might lead to unexpected results. Manually implementing `sCU` should not be needed when using mobx-react.");
-        }
+        // TODO: make throw in next major
+        console.warn("Use `shouldComponentUpdate` in an `observer` based component breaks the behavior of `observer` and might lead to unexpected results. Manually implementing `sCU` should not be needed when using mobx-react.");
     }
 }
 
