@@ -35,7 +35,7 @@
 
 html,body{-ms-touch-action:none;margin:0px}
 .chartContainer{display:block;font-family:"Roboto",helvetica,sans-serif;font-size:12px;position:relative;z-index:1;transition:height 0.4s ease-in-out}
-.smartcharts-light .chartContainer{background:#fff;color:#d2d3da}
+.smartcharts-light .chartContainer{background:#fff;color:rgba(0,0,0,0.41)}
 .smartcharts-dark .chartContainer{background:#2a3052;color:#aaacba}
 .chartContainer.ciq-draw-mode{cursor:none}
 .ciq-chart{height:auto;width:100%}
@@ -181,7 +181,7 @@ html,body{-ms-touch-action:none;margin:0px}
 .stx_projection_new{color:#0000ff}
 .stx_gaps{color:#b1b7b8;opacity:0.3}
 .stx_histogram{opacity:0.2}
-.smartcharts-light .stx_histogram{color:#d2d3da}
+.smartcharts-light .stx_histogram{color:rgba(0,0,0,0.41)}
 .smartcharts-dark .stx_histogram{color:#aaacba}
 .stx_annotation{font-size:13px;font-family:'Helvetica';background:transparent;box-shadow:none;padding:0px 6px;outline:none;color:#333;resize:none;z-index:1000}
 .smartcharts-light .stx_annotation{border:1px solid #e9e9ed}
@@ -194,7 +194,7 @@ html,body{-ms-touch-action:none;margin:0px}
 .stx_watermark{font-size:16px;font-family:'Helvetica'}
 .stx_fib_levels{font-size:12px;font-family:'Helvetica';color:transparent}
 .stx_share{font-size:14px;font-family:'georgia';width:1px}
-.smartcharts-light .stx_share{color:#d2d3da}
+.smartcharts-light .stx_share{color:rgba(0,0,0,0.41)}
 .smartcharts-dark .stx_share{color:#aaacba}
 .stx_share_symbol{font-size:14px;font-family:'Arial';font-weight:bold}
 .stx-holder{display:block;position:absolute;overflow:hidden;z-index:20}
@@ -206,7 +206,7 @@ html,body{-ms-touch-action:none;margin:0px}
 .smartcharts-light .stx_grid_dark{color:#e9e9ed}
 .smartcharts-dark .stx_grid_dark{color:rgba(170,172,186,0.08)}
 .stx_yaxis,.stx_xaxis,.stx_xaxis_dark{font-size:10px;font-family:'Roboto'}
-.smartcharts-light .stx_yaxis,.smartcharts-light .stx_xaxis,.smartcharts-light .stx_xaxis_dark{color:#d2d3da}
+.smartcharts-light .stx_yaxis,.smartcharts-light .stx_xaxis,.smartcharts-light .stx_xaxis_dark{color:rgba(0,0,0,0.41)}
 .smartcharts-dark .stx_yaxis,.smartcharts-dark .stx_xaxis,.smartcharts-dark .stx_xaxis_dark{color:#aaacba}
 .cq-down{color:#f95454}
 .cq-up{color:#4caf50}
