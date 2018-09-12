@@ -188,6 +188,7 @@ class ChartStore {
                     justifyRight: true,
                 },
             },
+            cleanupGaps: 'gap',
             minimumLeftBars: 2,
             yTolerance: 999999, // disable vertical scrolling
         };
@@ -218,6 +219,8 @@ class ChartStore {
         stxx.attachQuoteFeed(this.feed, {
             refreshInterval: null,
         });
+
+        window.stxx = stxx;
 
         this.feed.onComparisonDataUpdate(this.updateComparisons);
 

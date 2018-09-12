@@ -4,6 +4,7 @@ import { // eslint-disable-line import/no-extraneous-dependencies,import/no-unre
     StudyLegend,
     Comparison,
     Views,
+    Marker,
     CrosshairToggle,
     Timeperiod,
     ChartSize,
@@ -82,7 +83,12 @@ class App extends Component {
             ConnectionManager.EVENT_CONNECTION_REOPEN,
             () => this.setState({ isConnectionOpened: true }),
         );
-        this.state = { settings, isConnectionOpened: true };
+
+        let x = new Date().getTime() / 1000 | 0;
+        x = x % 2 === 1 ? x : x - 1; // make odd
+        this.state = { settings, isConnectionOpened: true, x };
+        // setTimeout(() => this.setState({ x:1534389300 }), 6000);
+        // setTimeout(() => this.setState({ endEpoch:1533872728 }), 7000);
     }
 
     symbolChange = (symbol) => {
@@ -127,7 +133,7 @@ class App extends Component {
     );
 
     render() {
-        const { settings, isConnectionOpened, symbol } = this.state;
+        const { settings, x, isConnectionOpened, symbol } = this.state;
 
         return (
             <SmartChart
@@ -144,7 +150,15 @@ class App extends Component {
                 settings={settings}
                 onSettingsChange={this.saveSettings}
                 isConnectionOpened={isConnectionOpened}
-            />
+                // chartType="mountain"
+            >
+                <Marker
+                    x={x}
+                    yPositioner="none"
+                >
+                    <div className="ciq-spot" />
+                </Marker>
+            </SmartChart>
         );
     }
 }

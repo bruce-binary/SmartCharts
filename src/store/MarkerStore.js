@@ -1,5 +1,6 @@
 import { observable, action } from 'mobx';
 import { getUTCDate, updatePropIfChanged } from '../utils';
+import { binarySearch } from '../../utils';
 
 // width here includes the size of the flag
 const MARKER_MAX_WIDTH = 150;
@@ -184,6 +185,45 @@ export default class MarkerStore {
                 x, xPositioner,
             },
         };
+    }
+
+    setMarkerTick(marker) {
+        if (this.chart.dataSet.length < 1) return;
+
+        const [xPositioner, x] = (this.xPositioner === 'epoch')
+            ? ['date',           new Date(getUTCDate(this.x))]
+            : [this.xPositioner, this.x];
+
+        if (xPositioner === 'master' && x) {
+            marker.tick = Math.floor(x / this.stx.layout.periodicity);
+        } else if (xPositioner === 'date' && x) {
+            // check if marker is in past
+            const firstDate = new Date(+this.chart.dataSet[0].DT);
+            if (x < firstDate) {
+                return;
+            }
+
+            // check if marker is in future:
+            const lastDate = new Date(+this.chart.dataSet[this.chart.dataSet.length - 1].DT);
+            if (lastDate < x) {
+                marker.params.future = true;
+                return;
+            }
+
+            const i = binarySearch(this.chart.dataSet, { DT: +x }, a => +a.DT);
+            if (i !== -1) {
+                marker.tick = i;
+            } else {
+                // Tick data is somewhere between. Add it to chart:
+                this.stx.updateChartData([{ Date: x }], this.chart, {
+                    fillGaps: true,
+                    useAsLastSale: true,
+                    allowReplaceOHL: true,
+                });
+                const j = binarySearch(this.chart.dataSet, { DT: +x }, a => +a.DT);
+                marker.tick = j;
+            }
+        }
     }
 
     hideMarker() {

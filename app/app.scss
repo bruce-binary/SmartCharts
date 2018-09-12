@@ -1,5 +1,26 @@
 /* Used for app only. Do not deploy with library! */
 
+.ciq-spot {
+    transition: bottom 100ms ease-out, opacity 100ms ease-out;
+    width: 4px;
+    height: 500px;
+    left: -2px;
+    position: relative;
+    background-color: #e6d857;
+    border-radius: 20px;
+
+    &:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: 3px;
+        bottom: 3px;
+        position: absolute;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+}
+
 #root {
     display: flex;
 }
