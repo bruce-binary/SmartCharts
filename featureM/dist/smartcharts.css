@@ -24,6 +24,7 @@
   height: 24px;
   width: 24px;
   line-height: 32px;
+  -webkit-transition: all 0.2s 0.15s;
   transition: all 0.2s 0.15s;
   border-radius: 2px;
   box-sizing: border-box;
@@ -69,6 +70,7 @@
     left: -100%;
     padding: 8px;
     z-index: 98;
+    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     border-radius: 4px; }
 .smartcharts-light .ciq-tooltip:after {
@@ -89,6 +91,7 @@
     content: '';
     left: 40%;
     z-index: 99;
+    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
 .smartcharts-light .ciq-tooltip:before {
       border-color: rgba(51, 51, 51, 0.88) transparent; }
@@ -160,7 +163,10 @@
     padding: 0px 5px 0px 16px; }
 .ciq-chart-types .ciq-list .ciq-list-item {
   padding: 0;
-  justify-content: space-between; }
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 .smartcharts-light .ciq-chart-types .ciq-list .ciq-list-item.active {
     border-right: 2px solid #f4f4f6; }
 .smartcharts-dark .ciq-chart-types .ciq-list .ciq-list-item.active {
@@ -172,8 +178,14 @@
     fill: #ffffff;
     stroke: #ffffff; }
 .ciq-chart-types .ciq-list .ciq-list-item > .left {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center; }
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
 .smartcharts-light .ciq-chart-types .ciq-list .ciq-list-item > .left .ic-icon path, .smartcharts-light .ciq-chart-types .ciq-list .ciq-list-item > .left .ic-icon circle, .smartcharts-light .ciq-chart-types .ciq-list .ciq-list-item > .left .ic-icon rect {
       fill: #333333;
       stroke: #333333; }
@@ -217,6 +229,7 @@
   box-shadow: 0 0 0.63em 0.03em rgba(0, 0, 0, 0.14);
   visibility: hidden;
   z-index: -3;
+  -webkit-transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), -webkit-transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1);
   transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), -webkit-transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1);
   transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1);
   transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), -webkit-transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1); }
@@ -249,11 +262,18 @@
   width: 280px;
   height: 200px;
   -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
           transform: translate(-50%);
   left: 50%; }
 .ciq-views .cq-menu-dropdown .template-name {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 32px;
     padding: 0 0 0 16px;
     margin: 16px 11px 0 0;
@@ -265,8 +285,14 @@
       border: 1px solid #4a4f6c;
       background: #2a3052; }
 .ciq-views .cq-menu-dropdown .template-name .icon {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-end; }
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
 .ciq-views .cq-menu-dropdown .template-name .icon.hide {
         display: none; }
 .smartcharts-light .ciq-views .cq-menu-dropdown .template-name .icon .tick-icon path {
@@ -278,14 +304,23 @@
 .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .icon .add-icon svg, .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .icon .add-icon path, .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .icon .add-icon g, .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .icon .add-icon polyline {
         fill: #aaacba; }
 .ciq-views .cq-menu-dropdown .template-name .add {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-grow: 8; }
+      -webkit-box-flex: 8;
+      -webkit-flex-grow: 8;
+          -ms-flex-positive: 8;
+              flex-grow: 8; }
 .smartcharts-light .ciq-views .cq-menu-dropdown .template-name .add .ic-icon svg, .smartcharts-light .ciq-views .cq-menu-dropdown .template-name .add .ic-icon path, .smartcharts-light .ciq-views .cq-menu-dropdown .template-name .add .ic-icon g, .smartcharts-light .ciq-views .cq-menu-dropdown .template-name .add .ic-icon polyline {
         fill: #2a3052; }
 .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .add .ic-icon svg, .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .add .ic-icon path, .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .add .ic-icon g, .smartcharts-dark .ciq-views .cq-menu-dropdown .template-name .add .ic-icon polyline {
         fill: #aaacba; }
 .ciq-views .cq-menu-dropdown .template-name .add-new {
-      flex: 8 0 0;
+      -webkit-box-flex: 8;
+      -webkit-flex: 8 0 0;
+          -ms-flex: 8 0 0px;
+              flex: 8 0 0;
       cursor: pointer; }
 .ciq-views .cq-menu-dropdown .template-name .view-input {
       font-size: 12px;
@@ -309,8 +344,17 @@
       overflow: auto;
       display: block; }
 .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item {
-        align-items: center;
-        justify-content: flex-start;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex; }
 .smartcharts-light .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item:hover {
           color: #333333; }
@@ -329,9 +373,13 @@
 .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item .ciq-list-item-text {
           width: calc(100% - 40px); }
 .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item .ic-icon {
-          justify-content: flex-end;
+          -webkit-box-pack: end;
+          -webkit-justify-content: flex-end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
           width: 40px;
           opacity: 0;
+          -webkit-transition: opacity 0.15s 0.2s;
           transition: opacity 0.15s 0.2s; }
 .smartcharts-light .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item .ic-icon svg, .smartcharts-light .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item .ic-icon path, .smartcharts-light .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item .ic-icon g, .smartcharts-light .ciq-views .cq-menu-dropdown .content .ciq-list .ciq-list-item .ic-icon polyline {
             fill: #333333; }
@@ -357,8 +405,14 @@
       text-align: center;
       height: 20px; }
 .ciq-views .ovrwrit-alrt .ovrwrit-alrt-buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: absolute;
     bottom: 16px;
     right: 30px;
@@ -372,7 +426,10 @@
 .smartcharts-dark .ciq-views .ovrwrit-alrt .ovrwrit-alrt-buttons > div {
         color: #ffffff; }
 .smartcharts-mobile .cq-menu-dropdown .dropdown-title .icon {
-  flex: none; }
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none; }
 .smartcharts-mobile .cq-menu-dropdown .content .ciq-list .ciq-list-item .ic-icon {
   opacity: 1; }
 
@@ -390,8 +447,14 @@
 .cq-slider {
   width: 150px;
   height: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative; }
 .cq-slider .cq-slider-range {
     position: relative;
@@ -496,7 +559,10 @@
         background: #ffffff; }
 .cq-slider > div:last-child {
     text-align: right;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     font-weight: bold; }
 .smartcharts-light .cq-slider > div:last-child {
       color: #2a3052; }
@@ -526,11 +592,13 @@
       border: 1px solid #4a4f6c; }
 .cq-dropdown .title svg {
       pointer-events: none;
+      -webkit-transition: -webkit-transform 0.6s;
       transition: -webkit-transform 0.6s;
       transition: transform 0.6s;
       transition: transform 0.6s, -webkit-transform 0.6s; }
 .cq-dropdown .title.active svg {
       -webkit-transform: scaleY(-1);
+          -ms-transform: scaleY(-1);
               transform: scaleY(-1);
       -webkit-filter: fliph;
               filter: fliph;
@@ -569,6 +637,7 @@
     top: 36px;
     opacity: 1;
     pointer-events: all;
+    -webkit-transition: opacity 0.3s, top 0.2s;
     transition: opacity 0.3s, top 0.2s; }
 .cq-dropdown .option {
     display: inline-block;
@@ -625,6 +694,7 @@
     width: 250px;
     padding: 8px;
     box-shadow: 0 2px 8px 0 rgba(42, 48, 82, 0.14);
+    -webkit-transition: opacity 0.1s;
     transition: opacity 0.1s;
     border-radius: 4px; }
 .smartcharts-light .cq-color-picker .dropdown {
@@ -638,10 +708,19 @@
 .cq-color-picker .dropdown .row {
       height: 18px;
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       margin-top: 2px;
-      align-items: center; }
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
 .cq-color-picker .dropdown .row .tile-color {
         width: 15px;
         height: 15px;
@@ -657,6 +736,7 @@
     top: 1px;
     width: 14px;
     height: 14px;
+    -webkit-transition: left 0.2s;
     transition: left 0.2s;
     border-radius: 7px; }
 .smartcharts-light .cq-switch .handle {
@@ -676,13 +756,24 @@
 .smartcharts-dark .cq-switch.off {
     background: #4a4f6c; }
 .cq-numbercolorpicker, .cq-fontsetting {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex; }
 .cq-fontsetting .cq-text-icon {
   margin-right: 5px; }
 .cq-text-icon {
-  justify-content: space-around;
-  align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   vertical-align: middle;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-family: serif;
   font-size: 15px; }
@@ -692,9 +783,17 @@
 .cq-changefontfamily {
   width: 138px; }
 .cq-toggle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 .cq-toggle > .ic-icon,
 .cq-chart-controls .ic-icon-with-sub {
   width: 24px;
@@ -753,15 +852,29 @@
 .ciq-period .cq-menu-dropdown .cq-interval {
       height: 160px;
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row; }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; }
 .smartcharts-light .ciq-period .cq-menu-dropdown .cq-interval {
         background: #ffffff; }
 .smartcharts-dark .ciq-period .cq-menu-dropdown .cq-interval {
         background: #353b5b; }
 .ciq-period .cq-menu-dropdown .timeUnit {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 88px;
       height: 100%; }
 .smartcharts-light .ciq-period .cq-menu-dropdown .timeUnit {
@@ -792,15 +905,32 @@
             background: #4a4f6c;
             border-right: 2px solid #ffffff; }
 .ciq-period .cq-menu-dropdown .interval {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 208px; }
 .ciq-period .cq-menu-dropdown .interval .row {
         height: 40px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
         margin: 0 4px;
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
         font-weight: 300; }
 .ciq-period .cq-menu-dropdown .interval .row span {
           cursor: pointer;
@@ -869,6 +999,9 @@
 /* stylelint-disable color-no-hex */
 /* stylelint-disable value-keyword-case */
 .cq-chart-size {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
   display: flex !important;
   height: auto;
   width: auto !important; }
@@ -878,6 +1011,7 @@
     opacity: 1;
     position: relative;
     cursor: pointer;
+    -webkit-transition: scale 0.25s;
     transition: scale 0.25s; }
 .cq-chart-size .cq-menu-btn {
     cursor: pointer;
@@ -895,7 +1029,11 @@
 .cq-chart-control-left .cq-chart-size {
   width: 100px !important;
   min-height: 116px;
-  flex-flow: column; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column; }
 .smartcharts-desktop.smartcharts-480 .cq-chart-control-bottom .cq-chart-controls .cq-chart-size .cq-menu-btn {
   width: 47px; }
 .smartcharts-desktop.smartcharts-900 .cq-chart-control-bottom .cq-chart-controls .cq-chart-size .cq-menu-btn {
@@ -923,11 +1061,23 @@
 .ciq-draw-tools .cq-menu-dropdown .body {
     padding: 0px 5px 0px 16px; }
 .ciq-draw-tools .cq-menu-dropdown .body .cq-draw-buttons {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex; }
 .ciq-draw-tools .cq-menu-dropdown .body .cq-draw-button {
-      flex: 1;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       cursor: pointer;
       margin: 8px 11px 8px 0;
       border-radius: 3px; }
@@ -963,6 +1113,7 @@
   cursor: pointer; }
 .cq-chart-setting .body {
   padding: 16px;
+  -webkit-transition: height 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: height 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   min-height: 190px; }
 .cq-chart-setting .body .ciq-list-setting {
@@ -994,9 +1145,15 @@
 .cq-chart-setting .body .ciq-list-setting .ciq-list-item .ciq-action {
         width: 50px;
         height: 25px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         padding: 6px 0;
-        justify-content: flex-end; }
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
 .cq-chart-setting .body .ciq-list-setting .ciq-list-item .cq-switch {
         margin: 6px 0 0; }
 .cq-chart-setting .body .ciq-list-language {
@@ -1022,6 +1179,7 @@
   height: 265px;
   width: 260px;
   position: relative;
+  -webkit-transition: height 250ms ease-out;
   transition: height 250ms ease-out; }
 .cq-chart-setting .cq-setting-container.container-language {
     height: 300px; }
@@ -1030,28 +1188,35 @@
     width: 260px;
     position: absolute;
     top: 0px;
+    -webkit-transition: opacity 0.17s ease-out, -webkit-transform 250ms ease-out;
     transition: opacity 0.17s ease-out, -webkit-transform 250ms ease-out;
     transition: transform 250ms ease-out, opacity 0.17s ease-out;
     transition: transform 250ms ease-out, opacity 0.17s ease-out, -webkit-transform 250ms ease-out; }
 .cq-chart-setting .cq-setting-container .cq-setting-main {
     -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
             transform: translateX(-100%); }
 .cq-chart-setting .cq-setting-container .cq-setting-main.animate-enter-active, .cq-chart-setting .cq-setting-container .cq-setting-main.animate-enter-done {
       -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
               transform: translateX(0);
       opacity: 1; }
 .cq-chart-setting .cq-setting-container .cq-setting-main.animate-exit-active, .cq-chart-setting .cq-setting-container .cq-setting-main.animate-exit-done {
       -webkit-transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
               transform: translateX(-100%); }
 .cq-chart-setting .cq-setting-container .cq-setting-language {
     -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
             transform: translateX(100%); }
 .cq-chart-setting .cq-setting-container .cq-setting-language.animate-enter-active, .cq-chart-setting .cq-setting-container .cq-setting-language.animate-enter-done {
       -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
               transform: translateX(0);
       opacity: 1; }
 .cq-chart-setting .cq-setting-container .cq-setting-language.animate-exit-active, .cq-chart-setting .cq-setting-container .cq-setting-language.animate-exit-done {
       -webkit-transform: translateX(100%);
+          -ms-transform: translateX(100%);
               transform: translateX(100%); }
 .cq-chart-control-left .cq-chart-setting .cq-menu-dropdown {
   top: auto !important;
@@ -1092,6 +1257,9 @@
   height: 100%;
   padding: 16px; }
 .cq-download .body .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     padding: 5px 0; }
 .cq-download .body .content .ciq-list-download {
@@ -1100,7 +1268,10 @@
         width: 100%;
         padding: 1px 10px;
         height: 40px;
-        justify-content: space-between; }
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
 .cq-download .body .content .ciq-list-download .ciq-list-item .cq-loading {
           margin-left: 5px; }
 .cq-download .body .content .ciq-list-download .ciq-list-item .ic-icon {
@@ -1136,9 +1307,18 @@
     font-size: 12px;
     height: 32px;
     padding: 0 0 0 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border-bottom: none;
     box-sizing: border-box; }
 .smartcharts-light .ciq-list .ciq-list-item {
@@ -1183,24 +1363,49 @@
 /* stylelint-disable color-no-hex */
 /* stylelint-disable value-keyword-case */
 .cq-dialog-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   width: 100%;
   position: absolute;
   bottom: 2em; }
 .cq-settings-dialog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: auto !important; }
 .cq-settings-dialog .ciq-num-input > input[type=number] {
     width: 5.5em; }
 .cq-settings-dialog .titlebar {
     height: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
 .smartcharts-light .cq-settings-dialog .titlebar {
       color: #333333; }
 .smartcharts-dark .cq-settings-dialog .titlebar {
@@ -1213,8 +1418,14 @@
       font-size: 14px;
       padding-left: 16px; }
 .cq-settings-dialog .titlebar .icons {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
       height: 50px; }
 .smartcharts-light .cq-settings-dialog .titlebar .icons .ic-icon path {
         fill: #333333; }
@@ -1232,7 +1443,13 @@
       border-bottom: 1px solid #353b5b; }
 .cq-settings-dialog .tabs {
     height: 40px;
-    align-items: stretch;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     box-sizing: border-box; }
@@ -1254,6 +1471,7 @@
       width: calc(50% + 1px);
       bottom: -1px;
       left: 0;
+      -webkit-transition: left linear 0.1s;
       transition: left linear 0.1s; }
 .smartcharts-light .cq-settings-dialog .tabs .active-border {
         background: #e9e9ed; }
@@ -1263,7 +1481,10 @@
         left: 50%; }
 .cq-settings-dialog .items {
     padding: 16px 0;
-    flex-grow: 1; }
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
 .smartcharts-light .cq-settings-dialog .items {
       background: #ffffff; }
 .smartcharts-dark .cq-settings-dialog .items {
@@ -1273,21 +1494,45 @@
       padding: 0 16px;
       height: 30px;
       margin-bottom: 5px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: space-around; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; }
 .cq-settings-dialog .items .item .title {
         font-size: 12px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center; }
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
 .smartcharts-light .cq-settings-dialog .items .item .title {
           color: #333333; }
 .smartcharts-dark .cq-settings-dialog .items .item .title {
           color: #aaacba; }
 .cq-settings-dialog .buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin-bottom: 5px; }
 .smartcharts-light .cq-settings-dialog .buttons {
       background: #ffffff; }
@@ -1305,7 +1550,10 @@
 .smartcharts-dark .cq-settings-dialog .buttons > div {
         color: #ffffff; }
 .cq-settings-dialog .description {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding: 16px;
     font-size: 12px;
     line-height: 18px; }
@@ -1355,9 +1603,13 @@
 .cq-categorical-display {
   width: 632px;
   padding: 0 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   text-align: left;
   overflow: hidden;
+  -webkit-transition: opacity 1s;
   transition: opacity 1s;
   border-radius: 3px;
   box-shadow: 0px, 2px, 4px, rgba(0, 0, 0, 0.2); }
@@ -1439,6 +1691,7 @@
       line-height: 28px;
       font-size: 9px;
       top: 7px;
+      -webkit-transition: right, opacity 0.2s ease-in-out;
       transition: right, opacity 0.2s ease-in-out; }
 .smartcharts-light .cq-categorical-display .cq-lookup-input > .icon-reset svg, .smartcharts-light .cq-categorical-display .cq-lookup-input > .icon-reset path, .smartcharts-light .cq-categorical-display .cq-lookup-input > .icon-reset g, .smartcharts-light .cq-categorical-display .cq-lookup-input > .icon-reset polyline {
         fill: #333333; }
@@ -1472,9 +1725,15 @@
     padding: 0 0 0 1.2em;
     font-size: 1.1em;
     border-radius: 3px 3px 0 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     height: 40px;
-    align-items: center; }
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
 .smartcharts-light .cq-categorical-display .subcategory {
       color: #333333; }
 .smartcharts-dark .cq-categorical-display .subcategory {
@@ -1507,6 +1766,7 @@
     line-height: 3.4em;
     text-align: left;
     cursor: pointer;
+    -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
     box-sizing: border-box; }
 .smartcharts-light .cq-categorical-display .cq-filter.cq-hover-style:hover {
@@ -1533,6 +1793,9 @@
 .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-forex path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-forex rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-forex circle, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-commodities path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-commodities rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-commodities circle, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-volidx path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-volidx rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-volidx circle, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-favorite path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-favorite rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-favorite circle, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-indicators path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-indicators rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-indicators circle, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-stocks path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-stocks rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-stocks circle, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-indices path, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-indices rect, .smartcharts-dark .cq-categorical-display .cq-filter.cq-active-filter .ic-icon.ic-indices circle {
         stroke: #ffffff; }
 .cq-categorical-display .cq-filter .ic-icon {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       vertical-align: middle;
       width: 16px;
@@ -1551,10 +1814,19 @@
   .cq-categorical-display .cq-active-item {
     padding-left: 20px;
     padding-right: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     height: 40px;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     line-height: normal;
     line-height: initial; }
 .smartcharts-light .cq-categorical-display .cq-item, .smartcharts-light
@@ -1573,8 +1845,14 @@
 .cq-categorical-display .cq-item .left, .cq-categorical-display .cq-item .right,
     .cq-categorical-display .cq-active-item .left,
     .cq-categorical-display .cq-active-item .right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center; }
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
 .smartcharts-light .cq-categorical-display .cq-item .right .ic-icon.ciq-favorite path, .smartcharts-light
     .cq-categorical-display .cq-active-item .right .ic-icon.ciq-favorite path {
       stroke: #2a3052; }
@@ -1631,6 +1909,9 @@
   background: #353b5b; }
 .cq-categorical-display .results-panel .cq-active-options {
   float: right;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex; }
 .cq-categorical-display .results-panel .cq-active-options > span, .cq-categorical-display .results-panel .cq-active-options .ic-icon {
     height: 24px;
@@ -1665,7 +1946,11 @@
 .smartcharts-desktop.smartcharts-900 .cq-categorical-display {
   width: 550px; }
 .smartcharts-mobile .cq-categorical-display {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 100%; }
 .smartcharts-mobile .cq-categorical-display .cq-lookup-filters {
@@ -1674,6 +1959,7 @@
     border-right: none;
     max-height: 200px;
     overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-in;
     transition: max-height 0.2s ease-in; }
 .smartcharts-light .smartcharts-mobile .cq-categorical-display .cq-lookup-filters {
       border-bottom: 1px solid #e9e9ed; }
@@ -1681,6 +1967,7 @@
       border-bottom: 1px solid #4a4f6c; }
 .smartcharts-mobile .cq-categorical-display .cq-lookup-filters.scroll-down {
       max-height: 0;
+      -webkit-transition: max-height 0.2s ease-out;
       transition: max-height 0.2s ease-out; }
 .smartcharts-mobile .cq-categorical-display .cq-lookup-input {
     margin: 1.2em 1em 0.5em; }
@@ -1692,8 +1979,13 @@
 .smartcharts-mobile .cq-categorical-display .cq-item, .smartcharts-mobile .cq-categorical-display .cq-active-item {
     height: 40px; }
 .smartcharts-mobile .cq-categorical-display .cq-filter-panel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around; }
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
 .smartcharts-mobile .cq-categorical-display .cq-filter-panel .cq-filter {
       border-right: none;
       background: transparent;
@@ -1734,17 +2026,30 @@
       color: #ffffff; }
 .cq-comparison .cq-comparison-item {
     position: relative;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 5px 10px;
     font-size: 12px;
     height: 18px;
     opacity: 1;
+    -webkit-transition: background 0.2s 0s, padding 0.2s 0s, opacity 0.2s 0.2s, height 0.2s 0.4s, font-size 0s 0.4s, margin 0.2s 0.4s;
     transition: background 0.2s 0s, padding 0.2s 0s, opacity 0.2s 0.2s, height 0.2s 0.4s, font-size 0s 0.4s, margin 0.2s 0.4s; }
 .cq-comparison .cq-comparison-item, .cq-comparison .cq-comparison-item .left, .cq-comparison .cq-comparison-item .right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center; }
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
 .cq-comparison .cq-comparison-item .right {
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
       margin-left: 1.5em;
       margin-right: 5px; }
 .cq-comparison .cq-comparison-item:hover {
@@ -1763,6 +2068,7 @@
     width: 1.3em;
     height: 1.3em; }
 .cq-comparison .cq-comparison-item .ciq-close {
+    -webkit-transition: opacity 0.2s 0s;
     transition: opacity 0.2s 0s;
     cursor: pointer;
     opacity: 0;
@@ -1782,6 +2088,9 @@
     width: 16px;
     margin-left: 10px; }
 .cq-comparison .cq-comparison-loader.stx-show {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
     display: inline-flex; }
 .smartcharts-mobile .cq-comparison {
   margin-top: 5px; }
@@ -1813,6 +2122,7 @@
       margin-right: 0px;
       width: 24px;
       -webkit-transform: scale(1);
+          -ms-transform: scale(1);
               transform: scale(1); }
 .smartcharts-light .cq-chart-title.ciq-menu.ciq-enabled.stxMenuActive > .cq-menu-btn > .cq-symbol-select-btn {
     border: 1px solid; }
@@ -1820,6 +2130,7 @@
     border: 1px solid; }
 .cq-chart-title.ciq-menu.ciq-enabled.stxMenuActive > .cq-menu-btn > .cq-symbol-select-btn > .ic-icon.cq-symbol-dropdown {
     -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
 .smartcharts-light .cq-chart-title.ciq-enabled .cq-symbol-select-btn {
     background: #ffffff;
@@ -1831,8 +2142,14 @@
     font-family: "Roboto", helvetica, sans-serif;
     padding: 0.3em 1em;
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 3px; }
 .smartcharts-light .cq-chart-title .cq-symbol-select-btn {
       color: #2a3052; }
@@ -1846,12 +2163,20 @@
       margin-right: 12px;
       margin-left: 12px;
       -webkit-transform: scale(1.3);
+          -ms-transform: scale(1.3);
               transform: scale(1.3); }
 .cq-chart-title .cq-symbol-select-btn > .ic-icon > svg, .cq-chart-title .cq-symbol-select-btn > .ic-frx > svg, .cq-chart-title .cq-symbol-select-btn > .ic-wld > svg, .cq-chart-title .cq-symbol-select-btn > .ic-otc > svg {
         height: 32px; }
 .cq-chart-title .cq-symbol-select-btn .cq-symbol-info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
 .cq-chart-title .cq-symbol-select-btn .cq-symbol-info .cq-market {
         font-size: 12px;
         font-weight: bold;
@@ -1866,6 +2191,7 @@
       text-align: left; }
 .cq-chart-title .cq-symbol-select-btn .cq-symbol .cq-animated-price,
       .cq-chart-title .cq-symbol-select-btn .cq-chart-price .cq-animated-price {
+        -webkit-transition: color 300ms ease-out;
         transition: color 300ms ease-out;
         padding-left: 16px; }
 .cq-chart-title .cq-symbol-select-btn .cq-symbol > div,
@@ -1899,10 +2225,12 @@
     left: 0px;
     bottom: auto;
     -webkit-transform: translateX(0) translateY(-3em);
+        -ms-transform: translateX(0) translateY(-3em);
             transform: translateX(0) translateY(-3em); }
 .cq-chart-title .cq-menu-dropdown.cq-menu-dropdown-enter-done, .cq-chart-title .cq-menu-dropdown.cq-menu-dropdown-enter-active {
       opacity: 1;
       -webkit-transform: translateX(0) translateY(0em);
+          -ms-transform: translateX(0) translateY(0em);
               transform: translateX(0) translateY(0em); }
 .cq-chart-title .cq-menu-dropdown.cq-menu-dropdown-enter-done {
       z-index: 6; }
@@ -1921,6 +2249,7 @@
     margin: 0.3em 0.4em; }
 .smartcharts.smartcharts-mobile .cq-chart-title .cq-menu-dropdown {
     width: 100%;
+    -webkit-transition: none !important;
     transition: none !important; }
 .smartcharts.smartcharts-mobile .cq-chart-title .cq-menu-dropdown.open {
       margin: 0px; }
@@ -1940,13 +2269,20 @@
   position: relative;
   z-index: +1;
   background: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 15px 0px;
   left: 10px;
   top: 10px;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   opacity: 1;
   height: 14px;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s; }
 .ciq-asset-information.hide {
     height: 0;
@@ -1955,9 +2291,18 @@
     pointer-events: none; }
 .ciq-asset-information > div {
     padding-right: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 12px; }
 .ciq-asset-information > div div:first-child {
       padding: 0 8px; }
@@ -1969,7 +2314,9 @@
       color: #aaacba; }
 .smartcharts-mobile .ciq-asset-information {
   left: 2px;
-  flex-wrap: wrap; }
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 .smartcharts-mobile .ciq-asset-information > div {
     font-size: 12px; }
 .smartcharts-mobile .ciq-asset-information > div div:first-child {
@@ -2042,6 +2389,7 @@ html, body {
   position: relative;
   /* chart container must be relative for internal DOM elements to be correct */
   z-index: 1;
+  -webkit-transition: height 0.4s ease-in-out;
   transition: height 0.4s ease-in-out; }
 .smartcharts-light .chartContainer {
     background: #ffffff;
@@ -2083,6 +2431,7 @@ html, body {
   overflow: visible;
   background-repeat: no-repeat;
   border-radius: 3px;
+  -webkit-transition: color 0.25s, border 0.25s, box-shadow 0.25s;
   transition: color 0.25s, border 0.25s, box-shadow 0.25s;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2103,6 +2452,7 @@ html, body {
   width: 25px;
   height: 25px;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s; }
@@ -2110,6 +2460,7 @@ html, body {
   /* Button Spacing */
   margin: 3px 2px;
   opacity: 0;
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s; }
 .smartcharts-light .stx-btn-panel {
     background-color: #ffffff; }
@@ -2121,6 +2472,7 @@ html, body {
 .stx-btn-panel:active {
     /* Scale up when active */
     -webkit-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
             transform: scale(1.2, 1.2); }
 .stx-btn-panel > span {
   background: no-repeat center; }
@@ -2176,6 +2528,7 @@ html, body {
   border-radius: 3px;
   background: #fafafa;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background 0.25s;
   transition: background 0.25s;
   cursor: pointer;
   z-index: 30; }
@@ -2186,6 +2539,7 @@ html, body {
   width: 30px;
   padding-top: 25px;
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.121' height='38.414'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' stroke-miterlimit='10' d='M.707.707l6 6-6 6'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' stroke-miterlimit='10' d='M.707 25.707l6 6-6 6'/%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' stroke-miterlimit='10' d='M7.707.707l6 6-6 6'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' stroke-miterlimit='10' d='M7.707 25.707l6 6-6 6'/%3E%3C/svg%3E") no-repeat center;
+  -webkit-transition: opacity 0.25s, -webkit-transform 0.2s;
   transition: opacity 0.25s, -webkit-transform 0.2s;
   transition: opacity 0.25s, transform 0.2s;
   transition: opacity 0.25s, transform 0.2s, -webkit-transform 0.2s;
@@ -2738,6 +3092,7 @@ html, body {
 /* -------- Axis tabs and current Prices -------- */
 .stx-holder:hover .stx-btn-panel {
   opacity: 1;
+  -webkit-transition: opacity 0.5s, height 0.3s;
   transition: opacity 0.5s, height 0.3s; }
 .stx-ico-handle {
   opacity: 1;
@@ -2778,6 +3133,9 @@ html, body {
 .stx_xaxis, .stx_yaxis, .stx_watermark {
   font-family: "Roboto", helvetica, sans-serif; }
 .sidenav.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 .sidenav {
   height: 250px;
@@ -2786,9 +3144,18 @@ html, body {
   z-index: 2;
   right: 0;
   display: none;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
   padding: 0; }
 .smartcharts-light .sidenav {
     border-left: 1px solid #e9e9ed; }
@@ -2887,6 +3254,7 @@ html, body {
   padding: 0 10px;
   cursor: pointer;
   border: none;
+  -webkit-transition: all 0.2s 0s, opacity 0.2s 0s;
   transition: all 0.2s 0s, opacity 0.2s 0s;
   box-sizing: border-box;
   box-shadow: 0, 1px, 2px, rgba(0, 0, 0, 0.2); }
@@ -2906,6 +3274,7 @@ html, body {
   .annotationSave:active,
   .annotationSave:active {
     border: none;
+    -webkit-transition: all 0s 0s;
     transition: all 0s 0s;
     box-shadow: inset 0, 1px, 2px, rgba(0, 0, 0, 0.2); }
 .annotationCancel.ciq-primary, .annotationCancel.ciq-primary,
@@ -3024,6 +3393,12 @@ html, body {
 .smartcharts-dark .smartcharts input {
       color: #ffffff;
       background-color: #2a3052; }
+.smartcharts-light .smartcharts input::-moz-placeholder, .smartcharts-light .smartcharts input::-moz-placeholder {
+      color: #333333; }
+.smartcharts-light .smartcharts input::placeholder, .smartcharts-light .smartcharts input::-moz-placeholder {
+      color: #333333; }
+.smartcharts-dark .smartcharts input::-moz-placeholder, .smartcharts-dark .smartcharts input::-moz-placeholder {
+      color: #ffffff; }
 .smartcharts-dark .smartcharts input::placeholder, .smartcharts-dark .smartcharts input::-moz-placeholder {
       color: #ffffff; }
 .smartcharts div, .smartcharts li, .smartcharts span, .smartcharts a {
@@ -3092,6 +3467,7 @@ html, body {
   pointer-events: none;
   opacity: 0;
   z-index: -3;
+  -webkit-transition: visibility 150ms ease-out, z-index 150ms ease-out, opacity 150ms ease-out, -webkit-transform 150ms ease-out;
   transition: visibility 150ms ease-out, z-index 150ms ease-out, opacity 150ms ease-out, -webkit-transform 150ms ease-out;
   transition: visibility 150ms ease-out, z-index 150ms ease-out, transform 150ms ease-out, opacity 150ms ease-out;
   transition: visibility 150ms ease-out, z-index 150ms ease-out, transform 150ms ease-out, opacity 150ms ease-out, -webkit-transform 150ms ease-out;
@@ -3119,6 +3495,9 @@ html, body {
     height: 40px;
     line-height: 40px;
     font-size: 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
 .cq-menu-dropdown .title .title-text {
       display: block;
@@ -3206,6 +3585,7 @@ html, body {
   padding: 0;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity 150 ease-out;
   transition: opacity 150 ease-out; }
 .smartcharts-mobile .stxMenuActive .cq-menu-overlay {
   opacity: 1;
@@ -3269,6 +3649,7 @@ html, body {
   height: 15px;
   background-position: -4px -488px;
   opacity: 0;
+  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s; }
 .no-touch .chart-line:hover .price-arrow {
   width: 20px;
@@ -3292,6 +3673,7 @@ html, body {
     right: 1px;
     top: -1px;
     -webkit-transform: scaleX(0.8);
+        -ms-transform: scaleX(0.8);
             transform: scaleX(0.8); }
 /*--------------------------------------------------*/
 /* shade */
@@ -3302,8 +3684,10 @@ html, body {
   width: 100%;
   right: 0px;
   opacity: 0.3;
+  -webkit-transition: opacity 0.1s ease-out;
   transition: opacity 0.1s ease-out; }
 .top-shade {
+  background-image: -webkit-linear-gradient(top, transparent 30%, var(--shade-color));
   background-image: linear-gradient(to bottom, transparent 30%, var(--shade-color));
   background-image: linear-gradient(to bottom, transparent 30%, var(--shade-color)); }
 .between-shade {
@@ -3311,6 +3695,7 @@ html, body {
   background-color: var(--shade-color);
   background-color: var(--shade-color); }
 .bottom-shade {
+  background-image: -webkit-linear-gradient(top, var(--shade-color), transparent 70%);
   background-image: linear-gradient(to bottom, var(--shade-color), transparent 70%);
   background-image: linear-gradient(to bottom, var(--shade-color), transparent 70%); }
 .cq-loader, .cq-comparison-loader, .cq-loading {
@@ -3352,6 +3737,7 @@ html, body {
 .ps__rail-x {
   display: none;
   opacity: 0;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
   transition: background-color 0.2s linear, opacity 0.2s linear;
   height: 15px;
   /* there must be 'bottom' or 'top' for ps__rail-x */
@@ -3360,6 +3746,7 @@ html, body {
   position: absolute; }
 .ps__rail-y {
   display: none;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
   transition: background-color 0.2s linear, opacity 0.2s linear;
   width: 9px !important;
   /* there must be 'right' or 'left' for ps__rail-y */
@@ -3385,6 +3772,7 @@ html, body {
 .ps__thumb-x {
   background-color: #aaa;
   border-radius: 6px;
+  -webkit-transition: background-color 0.2s linear, height 0.2s ease-in-out;
   transition: background-color 0.2s linear, height 0.2s ease-in-out;
   height: 6px;
   /* there must be 'bottom' for ps__thumb-x */
@@ -3394,6 +3782,7 @@ html, body {
 .ps__thumb-y {
   background-color: #aaa;
   border-radius: 6px;
+  -webkit-transition: background-color 0.2s linear, width 0.2s ease-in-out;
   transition: background-color 0.2s linear, width 0.2s ease-in-out;
   width: 6px !important;
   /* there must be 'right' for ps__thumb-y */
@@ -3453,13 +3842,24 @@ html, body {
 /* stylelint-disable value-keyword-case */
 .cq-chart-controls {
   position: absolute;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
   display: flex !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
   z-index: 2;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   /* Optional. only if you want the items to wrap */
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   box-sizing: border-box;
   border-radius: 2px; }
 .smartcharts-light .cq-chart-controls {
@@ -3475,6 +3875,7 @@ html, body {
       right: 5px;
       top: 11px;
       -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
               transform: rotate(225deg);
       /* 180 + 45 */
       display: none; }
@@ -3582,22 +3983,28 @@ html, body {
   /* the left and translateX 50% centers the dropdowns */
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(3em);
+      -ms-transform: translateX(-50%) translateY(3em);
           transform: translateX(-50%) translateY(3em); }
 .cq-chart-control-bottom .cq-chart-controls .ciq-menu .cq-menu-dropdown.cq-menu-dropdown-enter-done, .cq-chart-control-bottom .cq-chart-controls .ciq-menu .cq-menu-dropdown.cq-menu-dropdown-enter-active {
     -webkit-transform: translateX(-50%) translateY(0em);
+        -ms-transform: translateX(-50%) translateY(0em);
             transform: translateX(-50%) translateY(0em); }
 .cq-chart-control-left .cq-chart-controls .ciq-menu .cq-menu-dropdown {
   bottom: auto;
   left: 9em;
   top: -1em;
+  -webkit-transition: opacity 0.2s 0s;
   transition: opacity 0.2s 0s;
+  -webkit-transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), -webkit-transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1);
   transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), -webkit-transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1);
   transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1);
   transition: pointer-events 0.2s cubic-bezier(0.64, 0.04, 0.35, 1), transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1), opacity 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), z-index 0.17s cubic-bezier(0.64, 0.04, 0.35, 1), -webkit-transform 0.25s cubic-bezier(0.64, 0.04, 0.35, 1);
   -webkit-transform: translateX(-3em);
+      -ms-transform: translateX(-3em);
           transform: translateX(-3em); }
 .cq-chart-control-left .cq-chart-controls .ciq-menu .cq-menu-dropdown.cq-menu-dropdown-enter-done, .cq-chart-control-left .cq-chart-controls .ciq-menu .cq-menu-dropdown.cq-menu-dropdown-enter-active {
     -webkit-transform: translateX(0em);
+        -ms-transform: translateX(0em);
             transform: translateX(0em); }
 .cq-chart-controls .ciq-menu .cq-menu-dropdown.cq-menu-dropdown-exit-active {
   opacity: 0;
@@ -3620,7 +4027,11 @@ html, body {
   height: 100%;
   width: 100px;
   padding: 5px 0;
-  flex-flow: column; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column; }
 .smartcharts-light .cq-chart-control-left .cq-chart-controls {
     border-right: 1px solid #e9e9ed; }
 .smartcharts-dark .cq-chart-control-left .cq-chart-controls {
@@ -3631,7 +4042,9 @@ html, body {
     box-shadow: 2px 0.3px 0px 0 #ffffff; }
 /* Mobile Style */
 .smartcharts-mobile .cq-chart-controls {
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   padding: 0 0.7em;
   height: 40px; }
 .smartcharts-light .smartcharts-mobile .cq-chart-controls {
@@ -3727,8 +4140,15 @@ html, body {
     padding: 8px;
     box-sizing: border-box;
     box-shadow: 0 2px 8px 0 rgba(21, 33, 45, 0.32);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 .smartcharts-light .stx-crosshair-on .cq-crosshair .cq-crosshair-content {
       color: #ffffff;
       background: rgba(51, 51, 51, 0.88); }
@@ -3758,9 +4178,11 @@ html, body {
         border-left: 6px solid rgba(255, 255, 255, 0.88); }
 .stx-crosshair-on .cq-crosshair .cq-crosshair-content.arrow-left {
       -webkit-transform: translateX(30px) translateY(-50%);
+          -ms-transform: translateX(30px) translateY(-50%);
               transform: translateX(30px) translateY(-50%); }
 .stx-crosshair-on .cq-crosshair .cq-crosshair-content.arrow-right {
       -webkit-transform: translateX(calc(-100% - 30px)) translateY(-50%);
+          -ms-transform: translateX(calc(-100% - 30px)) translateY(-50%);
               transform: translateX(calc(-100% - 30px)) translateY(-50%); }
 .stx-crosshair-on .cq-crosshair .cq-crosshair-content.arrow-left:after, .stx-crosshair-on .cq-crosshair .cq-crosshair-content.arrow-right:before {
       display: block; }
@@ -3804,6 +4226,9 @@ html, body {
 /* stylelint-disable value-keyword-case */
 /* Used for app only. Do not deploy with library! */
 #root {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 /* Doorbell */
 #doorbell-button {
@@ -3815,6 +4240,7 @@ html, body {
   border-bottom: none;
   padding: 4px 8px;
   -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   max-width: 80px; }
 #doorbell form {
@@ -3881,18 +4307,37 @@ html, body {
   top: 20px;
   z-index: +3;
   background: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 .cq-notifications .notification {
     position: relative;
     margin-top: 4px;
     height: 32px;
     -webkit-animation: cq-slide-down 0.3s;
             animation: cq-slide-down 0.3s;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
     border: 1px solid #fdd063;
     border-radius: 3px; }
