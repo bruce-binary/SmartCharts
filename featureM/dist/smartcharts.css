@@ -1586,7 +1586,8 @@
       border: 1px solid #f44336;
       color: #f44336;
       padding: 3px 6px;
-      object-fit: contain;
+      -o-object-fit: contain;
+         object-fit: contain;
       font-size: 0.64em;
       border-radius: 3px; }
 .smartcharts-light .cq-categorical-display .cq-item:hover, .smartcharts-light .cq-categorical-display .cq-item.selected, .smartcharts-light
