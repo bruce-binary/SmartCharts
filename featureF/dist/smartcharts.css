@@ -304,7 +304,8 @@ html,body{-ms-touch-action:none;margin:0px}
 .smartcharts-dark .cq-menu-dropdown .cq-categorical-display .cq-lookup-filters{background:#2a3052}
 .smartcharts-mobile .ciq-menu.stxMenuActive{z-index:9}
 .smartcharts-mobile .ciq-menu .cq-menu-btn:hover>.ic-icon svg,.smartcharts-mobile .ciq-menu .cq-menu-btn:hover>.cq-toggle svg{background:transparent}
-.smartcharts-mobile .cq-modal-dropdown{pointer-events:none;z-index:90;position:fixed;height:inherit;width:100%;top:0}
+.smartcharts-mobile .cq-modal-dropdown{pointer-events:none;z-index:1;position:fixed;height:inherit;width:100%;top:0}
+.smartcharts-mobile .cq-modal-dropdown.stxMenuActive{z-index:2}
 .smartcharts-mobile .cq-modal-dropdown.ciq-studies .cq-menu-overlay .cq-menu-dropdown,.smartcharts-mobile .cq-modal-dropdown.cq-comparison-new .cq-menu-overlay .cq-menu-dropdown,.smartcharts-mobile .cq-modal-dropdown.cq-chart-title .cq-menu-overlay .cq-menu-dropdown{height:100%}
 .smartcharts-mobile .cq-modal-dropdown.ciq-studies .cq-menu-overlay .cq-menu-dropdown .title,.smartcharts-mobile .cq-modal-dropdown.cq-comparison-new .cq-menu-overlay .cq-menu-dropdown .title,.smartcharts-mobile .cq-modal-dropdown.cq-chart-title .cq-menu-overlay .cq-menu-dropdown .title{border-bottom:none !important}
 .smartcharts-mobile .cq-modal-dropdown .cq-menu-overlay{position:relative;transition:opacity 150ms;background:rgba(0,0,0,0.3);height:inherit;width:100%;padding:0;opacity:0}
