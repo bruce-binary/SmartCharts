@@ -308,7 +308,7 @@ html,body{-ms-touch-action:none;margin:0px}
 .smartcharts-mobile .cq-modal-dropdown.ciq-studies .cq-menu-overlay .cq-menu-dropdown,.smartcharts-mobile .cq-modal-dropdown.cq-comparison-new .cq-menu-overlay .cq-menu-dropdown,.smartcharts-mobile .cq-modal-dropdown.cq-chart-title .cq-menu-overlay .cq-menu-dropdown{height:100%}
 .smartcharts-mobile .cq-modal-dropdown.ciq-studies .cq-menu-overlay .cq-menu-dropdown .title,.smartcharts-mobile .cq-modal-dropdown.cq-comparison-new .cq-menu-overlay .cq-menu-dropdown .title,.smartcharts-mobile .cq-modal-dropdown.cq-chart-title .cq-menu-overlay .cq-menu-dropdown .title{border-bottom:none !important}
 .smartcharts-mobile .cq-modal-dropdown .cq-menu-overlay{position:relative;transition:opacity 150ms;background:rgba(0,0,0,0.3);height:inherit;width:100%;padding:0;opacity:0}
-.smartcharts-mobile .cq-modal-dropdown.stxMenuActive .cq-menu-overlay{opacity:1;visibility:visible}
+.smartcharts-mobile .cq-modal-dropdown.stxMenuActive .cq-menu-overlay{opacity:1;pointer-events:initial;visibility:visible}
 .smartcharts-mobile .cq-modal-dropdown.cq-chart-title .cq-menu-dropdown{-webkit-transform:translateY(-3em);transform:translateY(-3em)}
 .smartcharts-mobile .cq-modal-dropdown .cq-menu-dropdown{height:auto;bottom:0;box-shadow:none;border-radius:0;width:100%;position:absolute;-webkit-transform:translateY(3em);transform:translateY(3em)}
 .smartcharts-mobile .cq-modal-dropdown .cq-menu-dropdown.cq-menu-dropdown-enter-done,.smartcharts-mobile .cq-modal-dropdown .cq-menu-dropdown.cq-menu-dropdown-enter-active{-webkit-transform:translateY(0em);transform:translateY(0em)}
