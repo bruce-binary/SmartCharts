@@ -187,6 +187,7 @@ class ChartStore {
                     width: -10,
                     justifyRight: true,
                 },
+                gaplines: true,
             },
             cleanupGaps: 'gap',
             minimumLeftBars: 2,
