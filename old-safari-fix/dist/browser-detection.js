@@ -149,7 +149,7 @@ function browserDetect(rootEleId, SupportedBrowsers){
         cqA.innerHTML = 'Update Browser';
         cqA.style.cssText = 'background:#e98024;border-radius:4px;font-family:"Roboto";color:#fff;padding:10px;font-size:14px;font-weight:500;text-align:center;text-transform:uppercase;text-decoration:none;';
         cqNotSupported.appendChild(cqA);
-        
+
         if (cqRoot.nextSibling) {
             cqRoot.parentNode.insertBefore(cqNotSupported, cqRoot.nextSibling);
         } else {
@@ -162,7 +162,7 @@ function browserDetect(rootEleId, SupportedBrowsers){
         if (
                 (
                     message.indexOf('[mobx] MobX 5+ requires Proxy objects') !== -1 ||
-                    message.indexOf('not supported browser') !== -1 
+                    message.indexOf('not supported browser') !== -1
                 ) && cqRoot
             ) {
             renderNotSupported();
@@ -176,7 +176,7 @@ function browserDetect(rootEleId, SupportedBrowsers){
         var os = browser.os;
 
         if (
-            SupportedBrowsers[os] && 
+            SupportedBrowsers[os] &&
             SupportedBrowsers[os][name] !== undefined) {
             if(version < SupportedBrowsers[os][name]){
                 throw new Error('not supported browser');
@@ -194,7 +194,7 @@ browserDetect('root', {
         yandexbrowser: 14122130,
     },
     'Windows 10': {
-        edge: 16162990,
+        edge: 15150630,
         ie: 0, // not supported
         firefox: 3200,
         chrome: 4902623,
