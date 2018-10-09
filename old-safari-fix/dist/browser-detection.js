@@ -194,7 +194,7 @@ browserDetect('root', {
         yandexbrowser: 14122130,
     },
     'Windows 10': {
-        edge: 15150630,
+        edge: 16162990,
         ie: 0, // not supported
         firefox: 3200,
         chrome: 4902623,
