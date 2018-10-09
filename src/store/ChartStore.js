@@ -208,6 +208,8 @@ class ChartStore {
 
         const stxx = this.stxx = new CIQ.ChartEngine(engineParams);
 
+        window.stxx = stxx;
+
         const deleteElement = stxx.chart.panel.holder.parentElement.querySelector('.mouseDeleteText');
         const manageElement = stxx.chart.panel.holder.parentElement.querySelector('.mouseManageText');
         deleteElement.textConent = t.translate('right-click to delete');
