@@ -136,7 +136,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/binary-static/js/";
+/******/ 	__webpack_require__.p = "/js/";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -24455,17 +24455,6 @@ var Loading = function Loading(_ref) {
 };
 
 exports.default = Loading;
-
-/***/ }),
-
-/***/ "CIQ":
-/*!**********************!*\
-  !*** external "CIQ" ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = CIQ;
 
 /***/ })
 
