@@ -1,6 +1,10 @@
-(window["webpackJsonpsmartcharts"] = window["webpackJsonpsmartcharts"] || []).push([[2],{
+(window["webpackJsonpsmartcharts"] = window["webpackJsonpsmartcharts"] || []).push([["vendors~resize-observer-polyfill"],{
 
-/***/ 292:
+/***/ "./node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1044,9 +1048,9 @@ var index = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (index);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(138)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ })
 
 }]);
-//# sourceMappingURL=vendors~resize-observer-polyfill-51ea48.smartcharts.js.map
+//# sourceMappingURL=vendors~resize-observer-polyfill-e16d21.smartcharts.js.map

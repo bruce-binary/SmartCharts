@@ -1,6 +1,10 @@
-(window["webpackJsonpsmartcharts"] = window["webpackJsonpsmartcharts"] || []).push([[3],{
+(window["webpackJsonpsmartcharts"] = window["webpackJsonpsmartcharts"] || []).push([["html2canvas"],{
 
-/***/ 293:
+/***/ "./chartiq/html2canvas.min.js":
+/*!************************************!*\
+  !*** ./chartiq/html2canvas.min.js ***!
+  \************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -5208,9 +5212,9 @@
     };
   }]);
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(269)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ })
 
 }]);
-//# sourceMappingURL=html2canvas-dffad3.smartcharts.js.map
+//# sourceMappingURL=html2canvas-902b35.smartcharts.js.map
